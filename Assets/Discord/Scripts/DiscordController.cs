@@ -33,6 +33,7 @@ public class DiscordController : MonoBehaviour
     {
         presence.smallImageKey = "bored";
         presence.smallImageText = string.Format("Bored AF");
+        presence.state = string.Format("Living in boredom");
 
         DiscordRpc.UpdatePresence(presence);
     }
@@ -41,6 +42,16 @@ public class DiscordController : MonoBehaviour
     {
         presence.smallImageKey = "thinking";
         presence.smallImageText = string.Format("Hmm");
+        presence.state = string.Format("Contemplating");
+
+        DiscordRpc.UpdatePresence(presence);
+    }
+
+    public void EmotionHeartEyes()
+    {
+        presence.smallImageKey = "heart_eyes";
+        presence.smallImageText = string.Format("<3");
+        presence.state = string.Format("In love");
 
         DiscordRpc.UpdatePresence(presence);
     }
@@ -52,6 +63,14 @@ public class DiscordController : MonoBehaviour
         presence.largeImageKey = "watching_tv";
         presence.largeImageText = string.Format("Watching TV");
         presence.details = string.Format("Consuming Entertainment through a TV");
+        DiscordRpc.UpdatePresence(presence);
+    }
+
+    public void Headphones()
+    {
+        presence.largeImageKey = "headphones";
+        presence.largeImageText = string.Format("Listening");
+        presence.details = string.Format("Listening to music with my ears");
         DiscordRpc.UpdatePresence(presence);
     }
 

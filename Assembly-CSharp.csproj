@@ -306,6 +306,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>E:/Windows Crap/Documents/GitHub/Life Status/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Runtime">
+ <HintPath>E:/Windows Crap/Documents/GitHub/Life Status/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -317,12 +323,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-2017.3-Runtime">
- <HintPath>E:/Windows Crap/Documents/GitHub/Life Status/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-2017.3-Editor">
- <HintPath>E:/Windows Crap/Documents/GitHub/Life Status/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>E:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
