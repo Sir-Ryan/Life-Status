@@ -26,13 +26,32 @@ public class DiscordController : MonoBehaviour
 
     DiscordRpc.EventHandlers handlers;
 
-    public void OnClick()
+
+
+    //Emotions
+    public void EmotionBored()
     {
-        Debug.Log("You clicked the button idiot");
-        clickCounter++;
+        presence.smallImageKey = "bored";
+        presence.smallImageText = string.Format("Bored AF");
 
-        presence.details = string.Format("Button clicked {0} times", clickCounter);
+        DiscordRpc.UpdatePresence(presence);
+    }
 
+    public void EmotionThinking()
+    {
+        presence.smallImageKey = "thinking";
+        presence.smallImageText = string.Format("Hmm");
+
+        DiscordRpc.UpdatePresence(presence);
+    }
+
+
+    //Activities
+    public void TV()
+    {
+        presence.largeImageKey = "watching_tv";
+        presence.largeImageText = string.Format("Watching TV");
+        presence.details = string.Format("Consuming Entertainment through a TV");
         DiscordRpc.UpdatePresence(presence);
     }
 
@@ -43,20 +62,26 @@ public class DiscordController : MonoBehaviour
         DiscordRpc.UpdatePresence(presence);
     }
 
-    public void EmotionBored()
-    {
-        Debug.Log("ehhhhhhh, nothing to do");
 
-        presence.smallImageKey = "bored";
+    
+
+
+
+
+
+
+     //Click Counter
+    public void OnClick()
+    {
+        Debug.Log("You clicked the button idiot");
+        clickCounter++;
+
+        presence.details = string.Format("Button clicked {0} times", clickCounter);
 
         DiscordRpc.UpdatePresence(presence);
     }
 
-    public void EmotionThinking()
-    {
-        Debug.Log("hmmm");
-    }
-
+    //Other Stuff Which Doesn't Do Anything
     public void RequestRespondYes()
     {
         Debug.Log("Discord: responding yes to Ask to Join request");
