@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class DiscordJoinEvent : UnityEngine.Events.UnityEvent<string> { }
@@ -26,6 +28,8 @@ public class DiscordController : MonoBehaviour
 
     DiscordRpc.EventHandlers handlers;
 
+    
+ 
 
 
     //Emotions
@@ -56,13 +60,30 @@ public class DiscordController : MonoBehaviour
         DiscordRpc.UpdatePresence(presence);
     }
 
+    public void EmotionTriumph()
+    {
+        presence.smallImageKey = "triumph";
+        presence.smallImageText = string.Format(">:(");
+        presence.state = string.Format("Transcended to an angr bull");
+
+        DiscordRpc.UpdatePresence(presence);
+    }
+
+    public void EmotionNoMouth()
+    {
+        presence.smallImageKey = "no_mouth";
+        presence.smallImageText = string.Format("o o");
+        presence.state = string.Format(". . .");
+
+        DiscordRpc.UpdatePresence(presence);
+    }
 
     //Activities
     public void TV()
     {
         presence.largeImageKey = "watching_tv";
         presence.largeImageText = string.Format("Watching TV");
-        presence.details = string.Format("Consuming Entertainment through a TV");
+        presence.details = string.Format("Consuming Entertainment");
         DiscordRpc.UpdatePresence(presence);
     }
 
