@@ -11,6 +11,7 @@ public class DiscordSpectateEvent : UnityEngine.Events.UnityEvent<string> { }
 [System.Serializable]
 public class DiscordJoinRequestEvent : UnityEngine.Events.UnityEvent<DiscordRpc.JoinRequest> { }
 
+
 public class DiscordController : MonoBehaviour
 {
     public DiscordRpc.RichPresence presence = new DiscordRpc.RichPresence();
@@ -25,11 +26,20 @@ public class DiscordController : MonoBehaviour
     public DiscordJoinEvent onJoin;
     public DiscordJoinEvent onSpectate;
     public DiscordJoinRequestEvent onJoinRequest;
-
+    
     DiscordRpc.EventHandlers handlers;
 
-    
- 
+  
+    public InputField iField;
+    public void PleaseWork()
+    {
+        presence.state = iField.text;
+    }
+
+
+
+
+
 
 
     //Emotions
@@ -64,7 +74,7 @@ public class DiscordController : MonoBehaviour
     {
         presence.smallImageKey = "triumph";
         presence.smallImageText = string.Format(">:(");
-        presence.state = string.Format("Transcended to an angr bull");
+        presence.state = string.Format("Transcended to an angry bull");
 
         DiscordRpc.UpdatePresence(presence);
     }
@@ -79,7 +89,7 @@ public class DiscordController : MonoBehaviour
     }
 
     //Activities
-    public void TV()
+    public void ActTV()
     {
         presence.largeImageKey = "watching_tv";
         presence.largeImageText = string.Format("Watching TV");
@@ -87,7 +97,7 @@ public class DiscordController : MonoBehaviour
         DiscordRpc.UpdatePresence(presence);
     }
 
-    public void Headphones()
+    public void ActHeadphones()
     {
         presence.largeImageKey = "headphones";
         presence.largeImageText = string.Format("Listening");
@@ -95,14 +105,20 @@ public class DiscordController : MonoBehaviour
         DiscordRpc.UpdatePresence(presence);
     }
 
-    public void Rabbits()
+    public void ActRabbits()
     {
         presence.largeImageKey = "rabbits";
         presence.details = string.Format("Watching my sister's stupid rabbits");
         DiscordRpc.UpdatePresence(presence);
     }
 
-
+    public void ActCoding()
+    {
+        presence.largeImageKey = "coding";
+        presence.largeImageText = string.Format("Coding");
+        presence.details = string.Format("Developing cool apps");
+        DiscordRpc.UpdatePresence(presence);
+    }
     
 
 
